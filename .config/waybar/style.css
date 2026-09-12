@@ -1,0 +1,86 @@
+* {
+    border: none;
+    border-radius: 14px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 4px 8px;
+}
+
+#workspaces,
+#clock,
+#memory,
+#pulseaudio,
+#battery {
+    background: rgba(30, 30, 30, 0.45);
+    color: white;
+
+    padding: 0px 12px;   /* was 14px */
+    margin: 2px 3px;     /* was 6px 4px */
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    color: rgba(255,255,255,0.6);
+    padding: 0 8px;
+    margin: 3px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+#workspaces button.active {
+    color: white;
+    background: rgba(255,255,255,0.15);
+}
+
+#workspaces button:hover {
+    background: rgba(255,255,255,0.10);
+    color: white;
+}
+
+#clock {
+    font-weight: 700;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#pulseaudio {
+    color: #ffffff;
+}
+
+#battery {
+    color: #ffffff;
+}
+
+#battery.warning {
+    color: #ffd166;
+}
+
+#battery.critical {
+    color: #ff5f5f;
+}
+
+#battery.charging {
+    color: #7CFC98;
+}
