@@ -48,11 +48,9 @@ local menu = "hyprlauncher"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+hl.on("hyprland.start", function () 
+   hl.exec_cmd("waybar & hyprpaper")
+ end)
 
 
 -------------------------------
@@ -91,13 +89,13 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 0,
+        gaps_in  = 2.5,
         gaps_out = 0,
 
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = { colors = {"rgba(ff0000ee)", "rgba(0000ffee)"}, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
