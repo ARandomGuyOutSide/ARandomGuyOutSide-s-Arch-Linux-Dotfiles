@@ -36,7 +36,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu = "hyprlauncher"
+local menu = "~/.config/rofi/launchers/type-2/launcher.sh"
 
 
 -------------------
@@ -211,7 +211,7 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = true, -- if true disables the random hyprland logo / anime girl background. :(
-    },
+	},
 })
 
 
