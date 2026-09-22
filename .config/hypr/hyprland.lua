@@ -25,7 +25,7 @@ hl.monitor({
     output   = "eDP-1",
     mode     = "2560x1600@120",
     position = "auto",
-    scale    = "auto",
+    scale    = "1.60",
 })
 
 
@@ -51,6 +51,8 @@ local menu = "~/.config/rofi/launchers/type-2/launcher.sh"
 hl.on("hyprland.start", function () 
    hl.exec_cmd("hyprctl setcursor Polarnight-cursors 24")
    hl.exec_cmd("waybar & hyprpaper")
+   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
  end)
 
 
@@ -62,6 +64,12 @@ hl.on("hyprland.start", function ()
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+
+env = {
+    "ELECTRON_OZONE_PLATFORM_HINT,auto",
+}
+
 
 
 -----------------------
@@ -135,6 +143,10 @@ hl.config({
     animations = {
         enabled = true,
     },
+    xwayland = {
+    force_zero_scaling = true
+  },
+
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -284,7 +296,7 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + S",         hl.dsp.exec_cmd("flameshot gui"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
