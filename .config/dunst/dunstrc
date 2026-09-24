@@ -1,0 +1,61 @@
+[global]
+    # Appearance
+    font = Noto Sans 10
+    frame_width = 1
+    frame_color = "#ffffff"
+    separator_color = frame
+
+    corner_radius = 10
+    width = 300
+    height = 120
+    offset = 12x12
+    origin = top-right
+
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 10
+
+    # Dark, slightly transparent background
+    background = "#1e1e1ecc"
+    foreground = "#ffffff"
+
+    # Minimal look
+    separator_height = 2
+    gap_size = 8
+    indicate_hidden = yes
+
+    # Icons
+    icon_position = left
+    max_icon_size = 40
+
+    # Behavior
+    timeout = 5
+    show_indicators = no
+    stack_duplicates = true
+    hide_duplicate_count = true
+
+    # Mouse
+    mouse_left_click = close_current
+    mouse_middle_click = close_all
+    mouse_right_click = context
+
+    # History
+    history_length = 20
+
+[urgency_low]
+    background = "#1e1e1ecc"
+    foreground = "#bdbdbd"
+    frame_color = "#666666"
+    timeout = 3
+
+[urgency_normal]
+    background = "#1e1e1ecc"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 5
+
+[urgency_critical]
+    background = "#2a1e1ecc"
+    foreground = "#ffffff"
+    frame_color = "#ff5555"
+    timeout = 0
