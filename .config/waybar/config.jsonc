@@ -24,7 +24,7 @@
     },
 
     "memory": {
-        "format": "󰍛 {}%",
+        "format": " {}%",
         "interval": 2
     },
 
